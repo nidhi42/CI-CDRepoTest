@@ -25,7 +25,7 @@ jobs:
         run: 
           cd cicdAngular/ && npm i && npm run build
       - name: Push Build to Releases
-        uses: ncipollo/release-action@v1
+        uses: cicdAngular/
         with:
-          artifacts: "dist/angular-githubaction/*"
+          artifacts: "dist/cicdAngular/*"
           token: ${{ secrets.TOKEN }}
