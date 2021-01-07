@@ -24,8 +24,8 @@ jobs:
       - name: npm install and npm run build
         run: |
           ls
-          npm i
-          npm run build:prod
+          cd cicdAngular & npm i
+          cd cicdAngular & npm run build:prod
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
