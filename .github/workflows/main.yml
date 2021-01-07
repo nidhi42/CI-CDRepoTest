@@ -22,10 +22,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install and npm run build
-        run: |
+        run: 
           ls
-          cd cicdAngular & npm i
-          cd cicdAngular & npm run build:prod
+          cd cicdAngular/ && npm i && npm run build:prod
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
