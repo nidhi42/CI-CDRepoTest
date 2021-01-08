@@ -24,12 +24,9 @@ jobs:
       - name: npm install and npm run build
         run: 
           cd cicdAngular/ && npm i && npm run build
-      - name: Checkout Build Artifact
-        uses: actions/checkout@v2
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v2
+      - name: Upload Build Publish Artifact
+        uses: actions/upload-artifact@v2
         with:
-         name: my-artifact
-      - name: Display structure of downloaded files
-        run: ls -R
+         name: Publish
+         path: /home/runner/work/cicdAngular/cicdAngular/cicdAngular/dist/cicdAngular/index.js
         
