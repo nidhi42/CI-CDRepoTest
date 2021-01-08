@@ -29,7 +29,7 @@ jobs:
       - name: Download Build Artifact
         uses: actions/download-artifact@v2
         with:
-         name: cd dist/my-artifact
+         name: my-artifact
       - name: Display structure of downloaded files
         run: ls -R
         
