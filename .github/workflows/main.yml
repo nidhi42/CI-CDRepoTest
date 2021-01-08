@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install and npm run build:ci  
-        run: |  
+        run: cd cicdAngular/ && npm i && npm run build
           npm i  
           npm run build:ci  
       - name: Push Build to Releases  
