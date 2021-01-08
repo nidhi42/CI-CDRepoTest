@@ -27,5 +27,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
          name: Publish
-         path: /home/runner/work/CI-CDRepoTest/CI-CDRepoTest/cicdAngular
+         path: /home/runner/work/CI-CDRepoTest/CI-CDRepoTest/dist/cicdAngular
         
