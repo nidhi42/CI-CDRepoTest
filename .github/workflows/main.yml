@@ -21,12 +21,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and npm run build
-        run: cd cicdAngular/ && npm i && npm run build
-             npm run build:ci  
+      - name: npm install and npm run build:ci  
+        run: |  
+          npm i  
+          npm run build:ci  
       - name: Push Build to Releases  
         uses: ncipollo/release-action@v1  
         with:  
           artifacts: "dist/cicdAngular/*"  
-          token: ${{ secrets.TOKEN_GITHUB_ACTION }} 
+          token: ${{ secrets.TOKEN_GITHUB_ACTION }}   
         
