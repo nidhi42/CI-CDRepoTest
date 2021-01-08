@@ -23,11 +23,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install and npm run build
         run: cd cicdAngular/ && npm i && npm run build
-      - run: ng build --prod 
-      - name: Publish generated content to GitHub Pages
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
+      - name: Upload Build Publish Artifact
+        uses: actions/upload-artifact@v2
         with:
-          dir: dist
-          branch: gh-pages
-          token: ${{ secrets.TOKEN }}
+         name: Publish
+         path: /home/runner/work/CI-CDRepoTest/CI-CDRepoTest/cicdAngular
         
