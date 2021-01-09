@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Publish
-          run: cd CICDApplication/ && ng build
+          run: cd cicdAngular/ && ng build
           path: /home/runner/work/CI-CDRepoTest/CI-CDRepoTest/cicdAngular/dist/cicdAngular
       - name: Checkout Build Artifact
         uses: actions/checkout@v2
