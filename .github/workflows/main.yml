@@ -21,8 +21,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and npm run build
-        run: cd cicdAngular/ && npm i && npm run build
+      - name: npm install and npm run build --prod
+        run: cd cicdAngular/ && npm i && npm run build --prod
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
