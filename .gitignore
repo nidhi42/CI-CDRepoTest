@@ -1,8 +1,0 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/cicdAngular/dist/cicdAngular/main-es2015.js
-/cicdAngular/dist/cicdAngular/favicon.ico
-/cicdAngular/dist/cicdAngular/index.html
-/cicdAngular/dist/cicdAngular/runtime-es5.js
